@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ass3.css" rel="stylesheet">
+    <script src="ass3.js"></script>
+    <title>Forms</title>
+</head>
+<body >
+    <div class = "main">
+        <div class="main_form">
+            <div class="heading">
+                Song Playlist
+            </div>
+            <div class="form">
+                <form name = "formname" class="container" >
+                    <label id ="songName" for="sname" >Song Name</label><br>
+                    <input id = "songnameInput" type="text" name="songnameInput"  placeholder="Song Name.."><br>
+                    <label id ="songArtist" for="sartist" >Song Artist</label><br>
+                    <input id = "songartistInput" type="text" name="songartisInput"  placeholder="Song Artist.."><br>
+                    <label id="yearreleased" for="yearreleased">Year Released</label><br>
+                    <input id="yearreleasedInput" type="text" name="yearreleasedInput" placeholder="Year Released.."><br>
+                    <label id="albumcover" for="albumcover">Album Cover</label><br>
+                    <input id="albumcoverInput" type="file" name="albumcoverInput" onchange="uploadImage()" ><br>
+
+                    <div id = "buttons">
+                        <button type = "submit" id="submit">SUBMIT</button>
+                        <button type = "reset" id="clear" >CLEAR</button>
+                    </div>
+
+                </form>
+            </div> 
+                
+        </div>
+
+        <div class="display">
+            <div class="sortandsearch">
+                <div class="sort">
+                    <div class = "sortlabel">
+                        <label id ="sortName" for="sortname" >Sort By</label><br>
+                    </div>
+                    <div class = "sortdatas">
+                        <select id="sort" name="sort" onchange="sort()">
+                            <option id ="selectpro" value="none" selected disabled hidden >Select a sorting</option>
+                            <option value="sname">Song Name</option>
+                            <option value="sartist">Song Artist</option>
+                            <option value="year">Year Release</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class = "search">
+                    <div class = "searchlabel">
+                        <label id ="searchName" for="searchname"   >Search</label><br>
+                    </div>
+                    <div class = "searchtext">
+                        <input id = "searchInput" type="text" name="searchInput"  placeholder="search.." onkeyup="search()"><br>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="songstable">
+                <div class="playlistlabel">
+                    Favourite playlist
+                </div>
+                <div class ="tableDiv" >
+                    <table class = "table" id="table">
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+</body>
+</html>
